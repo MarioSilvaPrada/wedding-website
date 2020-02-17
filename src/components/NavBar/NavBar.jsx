@@ -4,9 +4,12 @@ import * as S from './NavBar.styled';
 
 const NavBar = () => (
   <S.Container>
-    <S.StyledLink to="/">Home</S.StyledLink>
-    <S.StyledLink to="/1">Page1</S.StyledLink>
-    <S.StyledLink to="/2">Page2</S.StyledLink>
+    <S.Wrapper>
+      <S.StyledLink to='/'>Cerimonia</S.StyledLink>
+      <S.StyledLink to='/1'>Receção</S.StyledLink>
+      <S.StyledTitle>Cláudia & Mário</S.StyledTitle>
+      <S.StyledLink to='/2'>Alojamento</S.StyledLink>
+    </S.Wrapper>
   </S.Container>
 );
 
