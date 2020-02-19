@@ -1,9 +1,12 @@
 import React from 'react';
+import Rececao from 'routes/Rececao/Rececao';
 import * as S from './App.styled';
+
 
 const App = () => (
   <S.Container>
-    <h1>Home</h1>
+    <S.StyledImage />
+    <Rececao />
   </S.Container>
 );
 
