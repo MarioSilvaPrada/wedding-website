@@ -8,7 +8,7 @@ const NavBar = () => (
       <S.StyledLink to="/1">Cerimonia</S.StyledLink>
       <S.StyledTitle>Cláudia & Mário</S.StyledTitle>
       <S.StyledLink to="/2">Copo de água</S.StyledLink>
-      <S.StyledLink to="/2">Alojamento</S.StyledLink>
+      <S.StyledLink to="/2">RSVP</S.StyledLink>
     </S.Wrapper>
   </S.Container>
 );

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   padding: 2rem;
@@ -10,18 +10,19 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  max-width: ${(props) => props.theme.maxWidth};
+  width: calc(${(props) => props.theme.maxWidth} / 2);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   color: ${(props) => props.theme.colors.darkGreen};
 `;
 
-export const StyledLink = styled(Link)`
-    margin-right: 2rem;
+export const StyledLink = styled(NavLink)`
+  font-size: .875rem;
 `;
 
 export const StyledTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 2rem;
   margin-right: 2rem;
 `;
