@@ -24,5 +24,4 @@ export const StyledLink = styled(NavLink)`
 
 export const StyledTitle = styled.h1`
   font-size: 2rem;
-  margin-right: 2rem;
 `;

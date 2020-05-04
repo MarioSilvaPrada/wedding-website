@@ -9,8 +9,7 @@ import NavBar from './components/NavBar/NavBar';
 import App from './routes/App/App';
 import theme from './theme/theme';
 // Pages
-import Page1 from './routes/Page1/Page';
-import Page2 from './routes/Page2/Page';
+import RSVP from './routes/RSVP/RSVP';
 import PageNotFound from './routes/PageNotFound/PageNotFound';
 
 // Components
@@ -22,8 +21,7 @@ const root = (
       <NavBar />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route exact path="/1" component={Page1} />
-        <Route exact path="/2" component={Page2} />
+        <Route exact path="/rsvp" component={RSVP} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
