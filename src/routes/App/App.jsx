@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from 'components/Section/Section';
 
-import data  from 'data';
+import data from 'data';
 import * as S from './App.styled';
 
 const App = () => (
