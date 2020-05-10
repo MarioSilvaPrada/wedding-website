@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledLink = styled(NavLink)`
-  font-size: .875rem;
+  font-size: 1rem;
 `;
 
 export const StyledTitle = styled.h1`
