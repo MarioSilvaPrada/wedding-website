@@ -147,7 +147,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
   font-size: 5.5rem;
   letter-spacing: -0.0454545em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.2rem;
   color: ${(props) => props.theme.colors.darkGreen};
 `;
 
