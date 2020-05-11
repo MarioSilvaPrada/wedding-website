@@ -8,12 +8,16 @@ export const Container = styled.div`
   background: ${({ background }) => background && background};
 `;
 
-export const StyledImage = styled.img`
+export const StyledImage = styled.div`
   width: 30.56rem;
   height: 30.56rem;
   border-radius: 50%;
   margin-bottom: 2rem;
   border: 5px solid white;
+  background-image: url(${({ background }) => background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const Title = styled.h1`

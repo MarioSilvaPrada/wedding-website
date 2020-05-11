@@ -128,9 +128,31 @@ export const SubmitButton = styled.input`
 
 export const StyledImage = styled.div`
   background: url('https://images.pexels.com/photos/173665/pexels-photo-173665.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-size: cover;
 `;
 
 export const StyledRadio = styled.input`margin-right: 4rem;`;
+
+export const TitleContainer = styled.div`
+  padding-top: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const Title = styled.h1`
+  font-size: 5.5rem;
+  letter-spacing: -0.0454545em;
+  margin-bottom: 1.2rem;
+  color: ${(props) => props.theme.colors.darkGreen};
+`;
+
+export const SubTitle = styled.p`
+  font-size: 1.4rem;
+  color: ${(props) => props.theme.colors.darkGreen};
+  font-weight: 300;
+`;

@@ -1,16 +1,14 @@
 import React from 'react';
 import Section from 'components/Section/Section';
-
 import data from 'data';
 import * as S from './App.styled';
 
 const App = () => (
   <S.Container>
     <S.StyledImage />
-    {data.map(({
-      background, image, title, time, adress, mapUrl,
-    }) => (
+    {data.map(({ background, image, title, time, adress, mapUrl }) => (
       <Section
+        key={image}
         background={background}
         image={image}
         title={title}

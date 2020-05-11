@@ -5,7 +5,7 @@ const Section = ({
   background, image, title, time, adress, mapUrl,
 }) => (
   <S.Container background={background}>
-    <S.StyledImage src={image} />
+    <S.StyledImage background={image} />
     <S.Title>{title}</S.Title>
     <S.Info>
       <S.Time>{time}</S.Time>
