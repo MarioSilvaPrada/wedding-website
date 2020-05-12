@@ -21,10 +21,10 @@ const root = (
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path='/' component={App} />
-        <Route exact path='/rsvp' component={RSVP} />
-        <Route exact path='/convite' component={Convite} />
-        <Route path='*' component={PageNotFound} />
+        <Route exact path="/" component={App} />
+        <Route exact path="/rsvp" component={RSVP} />
+        <Route exact path="/convite" component={Convite} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
   </ThemeProvider>

@@ -6,7 +6,9 @@ import * as S from './App.styled';
 const App = () => (
   <S.Container>
     <S.StyledImage />
-    {data.map(({ background, image, title, time, adress, mapUrl, name }) => (
+    {data.map(({
+      background, image, title, time, adress, mapUrl, name,
+    }) => (
       <Section
         key={image}
         background={background}
