@@ -20,6 +20,11 @@ export const StyledImage = styled.div`
   background-position: center;
 `;
 
+export const Name = styled.p`
+  margin-bottom: .7rem;
+  font-size: 1.5rem;
+`;
+
 export const Title = styled.h1`
   font-weight: 300;
   font-size: 3rem;
@@ -46,4 +51,7 @@ export const LinkMap = styled.a`
   }
 `;
 
-export const Adress = styled.p`margin-bottom: .5rem;`;
+export const Adress = styled.p`
+  margin-bottom: .9rem;
+  font-weight: 300;
+`;

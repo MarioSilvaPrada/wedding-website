@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
@@ -8,6 +8,7 @@ export const Container = styled.div`
   left: 0;
   right: 0;
   color: ${(props) => props.theme.colors.darkGreen};
+  ${({ isVisible }) => !isVisible && css`display: none;`};
 `;
 
 export const FixedContainer = styled.div`

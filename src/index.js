@@ -10,6 +10,7 @@ import App from './routes/App/App';
 import theme from './theme/theme';
 // Pages
 import RSVP from './routes/RSVP/RSVP';
+import Convite from './routes/Convite/Convite';
 import PageNotFound from './routes/PageNotFound/PageNotFound';
 
 // Components
@@ -20,9 +21,10 @@ const root = (
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/rsvp" component={RSVP} />
-        <Route path="*" component={PageNotFound} />
+        <Route exact path='/' component={App} />
+        <Route exact path='/rsvp' component={RSVP} />
+        <Route exact path='/convite' component={Convite} />
+        <Route path='*' component={PageNotFound} />
       </Switch>
     </Router>
   </ThemeProvider>
