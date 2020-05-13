@@ -12,12 +12,12 @@ const Convite = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
   return (
     <S.Container>
       <S.Convite src={convite} />
-      <S.Button to='/'>
+      <S.Button to="/">
         Detalhes
         <FaArrowRight />
       </S.Button>

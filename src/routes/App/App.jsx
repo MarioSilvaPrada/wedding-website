@@ -10,12 +10,14 @@ const App = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
   return (
     <S.Container>
       <S.StyledImage />
-      {data.map(({ background, image, title, time, adress, mapUrl, name }) => (
+      {data.map(({
+        background, image, title, time, adress, mapUrl, name,
+      }) => (
         <Section
           key={image}
           background={background}
