@@ -2,9 +2,9 @@ import React from 'react';
 import * as S from './Section.styled';
 
 const Section = ({
-  background, image, title, time, name, adress, mapUrl,
+  background, image, title, time, name, adress, mapUrl, element,
 }) => (
-  <S.Container background={background}>
+  <S.Container background={background} name={element}>
     <S.StyledImage background={image} />
     <S.Title>{title}</S.Title>
     <S.Info>

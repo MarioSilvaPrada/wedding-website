@@ -10,6 +10,7 @@ const data = [
     mapUrl: 'https://goo.gl/maps/tS8ZkcaDpv9K2cYp6',
     image: basilica,
     background: '#ffe8df',
+    element: 'cerimonia',
   },
   {
     title: 'Copo de Água',
@@ -18,6 +19,7 @@ const data = [
     mapUrl: 'https://g.page/quintadabichinha?share',
     image: quinta,
     background: '#f6f578',
+    element: 'copo',
   },
 ];
 

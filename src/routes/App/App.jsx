@@ -1,23 +1,41 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import Section from 'components/Section/Section';
 import data from 'data';
 import * as S from './App.styled';
 
 const App = () => {
   const { pathname } = useLocation();
+  const { state } = useLocation();
+
+  const scrollToElement = (el) => {
+    scroller.scrollTo(el, {
+      duration: 900,
+      smooth: true,
+    });
+  };
+
   useEffect(
     () => {
       window.scrollTo(0, 0);
     },
-    [pathname],
+    [ pathname ],
   );
+
+  useEffect(
+    () => {
+      if (state) {
+        scrollToElement(state.scroll);
+      }
+    },
+    [ state ],
+  );
+
   return (
     <S.Container>
       <S.StyledImage />
-      {data.map(({
-        background, image, title, time, adress, mapUrl, name,
-      }) => (
+      {data.map(({ background, image, title, time, adress, mapUrl, name, element }) => (
         <Section
           key={image}
           background={background}
@@ -27,6 +45,7 @@ const App = () => {
           name={name}
           adress={adress}
           mapUrl={mapUrl}
+          element={element}
         />
       ))}
     </S.Container>

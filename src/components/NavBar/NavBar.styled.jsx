@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   padding: 2rem;
@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   font-size: 1rem;
 `;
 

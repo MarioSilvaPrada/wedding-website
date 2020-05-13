@@ -11,6 +11,7 @@ import theme from './theme/theme';
 // Pages
 import RSVP from './routes/RSVP/RSVP';
 import Convite from './routes/Convite/Convite';
+import Agradecimento from './routes/Agradecimento/Agradecimento';
 import PageNotFound from './routes/PageNotFound/PageNotFound';
 
 // Components
@@ -24,6 +25,7 @@ const root = (
         <Route exact path="/" component={App} />
         <Route exact path="/rsvp" component={RSVP} />
         <Route exact path="/convite" component={Convite} />
+        <Route exact path="/obrigado" component={Agradecimento} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>

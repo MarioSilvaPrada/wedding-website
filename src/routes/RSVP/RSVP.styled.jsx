@@ -115,15 +115,16 @@ export const RadioInputWrapper = styled(InputWrapper)`
 margin-bottom: 1.1rem;
 `;
 
-export const SubmitButton = styled.input`
+export const SubmitButton = styled.button`
   padding: .9rem 2rem;
   border-radius: 2rem;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   border: 1px solid black;
-  cursor: pointer;
   font-weight: 800;
   margin-top: 1rem;
+  opacity: ${({ isDisabled }) => (isDisabled ? 0.4 : 1)};
+  cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'pointer')};
 `;
 
 export const StyledImage = styled.div`

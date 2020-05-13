@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
+
 
 import * as S from './RSVP.styled';
 
@@ -11,6 +12,7 @@ const RSVP = () => {
   const [plus, setPlus] = useState('');
 
   const { pathname } = useLocation();
+  const history = useHistory();
 
   useEffect(
     () => {
@@ -18,6 +20,12 @@ const RSVP = () => {
     },
     [pathname],
   );
+
+  const disableButton = email === '' || firstName === '' || lastName === '' || confirmation === '';
+
+  const onSubmit = () => {
+    history.push('/obrigado');
+  };
 
   return (
     <S.StyledContainer>
@@ -31,6 +39,7 @@ const RSVP = () => {
         method="POST"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScl0AqV1WgzQ-hERFRqXZVdGj_YW7CxjcnxpVV0LzEccZaNpQ/formResponse"
         target="hidden_iframe"
+        onSubmit={onSubmit}
       >
         <S.StyledInputContainer>
           <S.Label>E-mail *</S.Label>
@@ -99,7 +108,7 @@ const RSVP = () => {
             />
           </S.StyledInputContainer>
         )}
-        <S.SubmitButton type="submit" value="Enviar" />
+        <S.SubmitButton isDisabled={disableButton}>Enviar</S.SubmitButton>
       </S.StyledForm>
     </S.StyledContainer>
   );
