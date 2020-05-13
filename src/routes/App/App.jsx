@@ -20,7 +20,7 @@ const App = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
 
   useEffect(
@@ -29,13 +29,15 @@ const App = () => {
         scrollToElement(state.scroll);
       }
     },
-    [ state ],
+    [state],
   );
 
   return (
     <S.Container>
       <S.StyledImage />
-      {data.map(({ background, image, title, time, adress, mapUrl, name, element }) => (
+      {data.map(({
+        background, image, title, time, adress, mapUrl, name, element,
+      }) => (
         <Section
           key={image}
           background={background}
