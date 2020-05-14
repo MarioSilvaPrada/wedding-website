@@ -8,7 +8,9 @@ export const Container = styled.div`
   left: 0;
   right: 0;
   color: ${(props) => props.theme.colors.darkGreen};
+  color: white;
   ${({ isVisible }) => !isVisible && css`display: none;`};
+  z-index: 10;
 `;
 
 export const FixedContainer = styled.div`
@@ -25,6 +27,7 @@ export const FixedContainer = styled.div`
   transform: translateY(${(props) => (props.isVisible ? 0 : '-2rem')});
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: .5s;
+  z-index: 2;
 `;
 
 export const Wrapper = styled.div`

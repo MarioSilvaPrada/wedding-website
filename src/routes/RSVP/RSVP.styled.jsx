@@ -117,7 +117,7 @@ margin-bottom: 1.1rem;
 
 export const SubmitButton = styled.input`
   padding: .9rem 2rem;
-  border-radius: 2rem;
+  border-radius: 4px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   border: 1px solid black;
