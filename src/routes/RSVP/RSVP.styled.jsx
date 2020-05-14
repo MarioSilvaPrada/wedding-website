@@ -115,7 +115,7 @@ export const RadioInputWrapper = styled(InputWrapper)`
 margin-bottom: 1.1rem;
 `;
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled.input`
   padding: .9rem 2rem;
   border-radius: 2rem;
   font-family: 'Josefin Sans', sans-serif;
