@@ -38,6 +38,7 @@ export const Title = styled.div`
 export const MainText = styled.h1`
   font-size: 6rem;
   margin-bottom: 3rem;
+  letter-spacing: -0.0454545em;
 `;
 
 export const SubText = styled.p`

@@ -5,7 +5,7 @@ import Section from 'components/Section/Section';
 import Carousel from 'components/Carousel/Carousel';
 import data from 'data';
 
-import * as S from './App.styled';
+import Container from './App.styled';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -22,7 +22,7 @@ const App = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [pathname],
+    [ pathname ],
   );
 
   useEffect(
@@ -31,15 +31,13 @@ const App = () => {
         scrollToElement(state.scroll);
       }
     },
-    [state],
+    [ state ],
   );
 
   return (
-    <S.Container>
+    <Container>
       <Carousel />
-      {data.map(({
-        background, image, title, time, adress, mapUrl, name, element,
-      }) => (
+      {data.map(({ background, image, title, time, adress, mapUrl, name, element }) => (
         <Section
           key={image}
           background={background}
@@ -52,7 +50,7 @@ const App = () => {
           element={element}
         />
       ))}
-    </S.Container>
+    </Container>
   );
 };
 

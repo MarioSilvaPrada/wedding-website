@@ -42,28 +42,26 @@ const MyCarousel = () => {
         autoPlay
         infiniteLoop
         showThumbs={false}
-        renderArrowPrev={(onClickHandler, hasPrev, label) =>
-          hasPrev && (
-            <button
-              type='button'
-              onClick={onClickHandler}
-              title={label}
-              style={{ ...arrowStyles, left: 15 }}
-            >
-              <IoIosArrowBack style={{ color: 'white', fontSize: '2.5rem' }} />
-            </button>
-          )}
-        renderArrowNext={(onClickHandler, hasNext, label) =>
-          hasNext && (
-            <button
-              type='button'
-              onClick={onClickHandler}
-              title={label}
-              style={{ ...arrowStyles, right: 15 }}
-            >
-              <IoIosArrowForward style={{ color: 'white', fontSize: '2.5rem' }} />
-            </button>
-          )}
+        renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev && (
+        <button
+          type="button"
+          onClick={onClickHandler}
+          title={label}
+          style={{ ...arrowStyles, left: 15 }}
+        >
+          <IoIosArrowBack style={{ color: 'white', fontSize: '2.5rem' }} />
+        </button>
+        )}
+        renderArrowNext={(onClickHandler, hasNext, label) => hasNext && (
+        <button
+          type="button"
+          onClick={onClickHandler}
+          title={label}
+          style={{ ...arrowStyles, right: 15 }}
+        >
+          <IoIosArrowForward style={{ color: 'white', fontSize: '2.5rem' }} />
+        </button>
+        )}
       >
         {carouselData.map((pic) => (
           <S.ImageContainer key={pic.img}>

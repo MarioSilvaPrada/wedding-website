@@ -1,17 +1,22 @@
 import styled from 'styled-components';
+import pic from 'assets/rsvp-pic.jpg';
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled.div`min-height: 100vh;`;
+
+export const FormContainer = styled.div`
+  background: red;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: ${(props) => props.theme.colors.lightGreen};
-  min-height: 100vh;
 `;
-
-export const Wrapper = styled.div`background: ${(props) => props.theme.colors.lightGreen};`;
 
 export const StyledForm = styled.form`
   width: 33rem;
   padding: 1rem 2rem;
   margin: 0 auto;
-  padding: 3rem 0 5rem;
+  padding: 3rem 0;
 `;
 
 export const Label = styled.label`
@@ -128,10 +133,20 @@ export const SubmitButton = styled.input`
 `;
 
 export const StyledImage = styled.div`
-  background: url('https://images.pexels.com/photos/173665/pexels-photo-173665.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  height: 60vh;
+  background: url(${pic});
+  height: 80vh;
   width: 100%;
   background-size: cover;
+  position: relative;
+`;
+
+export const Layer = styled.div`
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export const StyledRadio = styled.input`margin-right: 4rem;`;
@@ -143,17 +158,18 @@ export const TitleContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
 `;
 
 export const Title = styled.h1`
   font-size: 5.5rem;
   letter-spacing: -0.0454545em;
-  margin-bottom: 2.2rem;
-  color: ${(props) => props.theme.colors.darkGreen};
+  margin-bottom: 3rem;
+  z-index: 2;
 `;
 
 export const SubTitle = styled.p`
-  font-size: 1.4rem;
-  color: ${(props) => props.theme.colors.darkGreen};
+  font-size: 2.3rem;
   font-weight: 300;
+  z-index: 2;
 `;
