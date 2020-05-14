@@ -72,7 +72,7 @@ const MyCarousel = () => {
       </Carousel>
       <S.Title>
         <S.MainText>Estamos noivos!</S.MainText>
-        <S.SubText>E queremos partilhar este momento contigo</S.SubText>
+        <S.SubText>E queremos partilhar este momento contigo.</S.SubText>
       </S.Title>
     </S.CarouselWrapper>
   );
