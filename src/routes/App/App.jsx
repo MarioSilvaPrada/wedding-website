@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import Section from 'components/Section/Section';
 import data from 'data';
-import * as S from './App.styled';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -11,6 +10,7 @@ import pic1 from 'assets/carousel/pic1.jpg';
 import pic2 from 'assets/carousel/pic2.jpg';
 import pic3 from 'assets/carousel/pic3.jpg';
 import pic4 from 'assets/carousel/pic4.jpg';
+import * as S from './App.styled';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -42,7 +42,7 @@ const App = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
 
   useEffect(
@@ -51,7 +51,7 @@ const App = () => {
         scrollToElement(state.scroll);
       }
     },
-    [ state ],
+    [state],
   );
 
   return (
@@ -63,7 +63,9 @@ const App = () => {
           </S.ImageContainer>
         ))}
       </Carousel>
-      {data.map(({ background, image, title, time, adress, mapUrl, name, element }) => (
+      {data.map(({
+        background, image, title, time, adress, mapUrl, name, element,
+      }) => (
         <Section
           key={image}
           background={background}
