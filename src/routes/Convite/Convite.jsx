@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { LazyImage } from 'react-lazy-images';
 
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -12,12 +13,17 @@ const Convite = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [pathname],
+    [ pathname ],
   );
   return (
     <S.Container>
-      <S.Convite src={convite} />
-      <S.Button to="/">
+      <LazyImage
+        src={convite}
+        placeholder={({ ref }) => <h1 ref={ref}>Loading...</h1>}
+        actual={() => <S.Convite src={convite} />}
+      />
+
+      <S.Button to='/'>
         Detalhes
         <FaArrowRight />
       </S.Button>

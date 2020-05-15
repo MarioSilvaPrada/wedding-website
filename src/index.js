@@ -14,7 +14,7 @@ import Convite from './routes/Convite/Convite';
 import Agradecimento from './routes/Agradecimento/Agradecimento';
 import PageNotFound from './routes/PageNotFound/PageNotFound';
 
-// Components
+// Images
 
 const rootElement = document.getElementById('root');
 const root = (
