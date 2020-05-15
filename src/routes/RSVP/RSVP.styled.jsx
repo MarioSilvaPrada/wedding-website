@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import pic from 'assets/rsvp-pic.jpg';
 
 export const StyledContainer = styled.div`min-height: 100vh;`;
 
@@ -133,7 +132,7 @@ export const SubmitButton = styled.input`
 `;
 
 export const StyledImage = styled.div`
-  background: url(${pic});
+  background: ${({ pic }) => pic && `url(${pic})`};
   height: 80vh;
   width: 100%;
   background-size: cover;

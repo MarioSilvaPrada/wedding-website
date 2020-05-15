@@ -5,6 +5,7 @@ import { LazyImage } from 'react-lazy-images';
 import { FaArrowRight } from 'react-icons/fa';
 
 import convite from 'assets/Convite.png';
+import Spinner from 'components/Spinner/Spinner';
 import * as S from './Convite.styled';
 
 const Convite = () => {
@@ -13,17 +14,21 @@ const Convite = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [pathname],
+    [ pathname ],
   );
   return (
     <S.Container>
       <LazyImage
         src={convite}
-        placeholder={({ ref }) => <h1 ref={ref}>Loading...</h1>}
+        placeholder={({ ref }) => (
+          <div ref={ref}>
+            <Spinner />
+          </div>
+        )}
         actual={() => <S.Convite src={convite} />}
       />
 
-      <S.Button to="/">
+      <S.Button to='/'>
         Detalhes
         <FaArrowRight />
       </S.Button>

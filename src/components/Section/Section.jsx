@@ -1,15 +1,17 @@
 import React from 'react';
 import { LazyImage } from 'react-lazy-images';
 import * as S from './Section.styled';
+import Spinner from 'components/Spinner/Spinner';
 
-
-const Section = ({
-  background, image, title, time, name, adress, mapUrl, element,
-}) => (
+const Section = ({ background, image, title, time, name, adress, mapUrl, element }) => (
   <S.Container background={background} name={element}>
     <LazyImage
       src={image}
-      placeholder={({ ref }) => <h1 ref={ref}>Loading...</h1>}
+      placeholder={({ ref }) => (
+        <div ref={ref}>
+          <Spinner />
+        </div>
+      )}
       actual={() => <S.StyledImage background={image} />}
     />
     <S.Title>{title}</S.Title>
@@ -17,7 +19,7 @@ const Section = ({
       <S.Time>{time}</S.Time>
       <S.Name>{name}</S.Name>
       <S.Adress>{adress}</S.Adress>
-      <S.LinkMap target="blank" href={mapUrl}>
+      <S.LinkMap target='blank' href={mapUrl}>
         Ver no mapa
       </S.LinkMap>
     </S.Info>
