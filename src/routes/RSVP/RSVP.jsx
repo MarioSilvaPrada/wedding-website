@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 
 import * as S from './RSVP.styled';
@@ -120,4 +120,4 @@ const RSVP = () => {
   );
 };
 
-export default RSVP;
+export default memo(RSVP);
