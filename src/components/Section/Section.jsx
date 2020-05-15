@@ -1,9 +1,11 @@
 import React from 'react';
+import { LazyImage } from 'react-lazy-images';
 import * as S from './Section.styled';
 
-import { LazyImage } from 'react-lazy-images';
 
-const Section = ({ background, image, title, time, name, adress, mapUrl, element }) => (
+const Section = ({
+  background, image, title, time, name, adress, mapUrl, element,
+}) => (
   <S.Container background={background} name={element}>
     <LazyImage
       src={image}
@@ -15,7 +17,7 @@ const Section = ({ background, image, title, time, name, adress, mapUrl, element
       <S.Time>{time}</S.Time>
       <S.Name>{name}</S.Name>
       <S.Adress>{adress}</S.Adress>
-      <S.LinkMap target='blank' href={mapUrl}>
+      <S.LinkMap target="blank" href={mapUrl}>
         Ver no mapa
       </S.LinkMap>
     </S.Info>
