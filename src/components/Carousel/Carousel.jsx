@@ -1,6 +1,7 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { LazyImage } from 'react-lazy-images';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -42,30 +43,36 @@ const MyCarousel = () => {
         autoPlay
         infiniteLoop
         showThumbs={false}
-        renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev && (
-        <button
-          type="button"
-          onClick={onClickHandler}
-          title={label}
-          style={{ ...arrowStyles, left: 15 }}
-        >
-          <IoIosArrowBack style={{ color: 'white', fontSize: '2.5rem' }} />
-        </button>
-        )}
-        renderArrowNext={(onClickHandler, hasNext, label) => hasNext && (
-        <button
-          type="button"
-          onClick={onClickHandler}
-          title={label}
-          style={{ ...arrowStyles, right: 15 }}
-        >
-          <IoIosArrowForward style={{ color: 'white', fontSize: '2.5rem' }} />
-        </button>
-        )}
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <button
+              type='button'
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, left: 15 }}
+            >
+              <IoIosArrowBack style={{ color: 'white', fontSize: '2.5rem' }} />
+            </button>
+          )}
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <button
+              type='button'
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, right: 15 }}
+            >
+              <IoIosArrowForward style={{ color: 'white', fontSize: '2.5rem' }} />
+            </button>
+          )}
       >
         {carouselData.map((pic) => (
           <S.ImageContainer key={pic.img}>
-            <S.PhotoCarousel img={pic.img} />
+            <LazyImage
+              src={pic.img}
+              placeholder={({ ref }) => <h1 ref={ref}>Loading...</h1>}
+              actual={() => <S.PhotoCarousel img={pic.img} />}
+            />
             <S.Layer />
           </S.ImageContainer>
         ))}
