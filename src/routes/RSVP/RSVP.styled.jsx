@@ -4,12 +4,11 @@ import pic from 'assets/rsvp-pic.jpg';
 export const StyledContainer = styled.div`min-height: 100vh;`;
 
 export const FormContainer = styled.div`
-  background: red;
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.theme.colors.lightGreen};
+  background: ${(props) => props.theme.colors.color2};
 `;
 
 export const StyledForm = styled.form`
