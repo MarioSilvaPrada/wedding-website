@@ -1,9 +1,9 @@
 const theme = {
   colors: {
     white: '#f4f9f4',
-    lightGreen: '#a7d7c5',
-    green: '#74b49b',
-    darkGreen: '#5c8d89',
+    lightGreen: '#e1f2fb',
+    green: '#113f67',
+    darkBlue: '#113f67',
   },
   fontSize: {
     small: '.8rem',

@@ -4,8 +4,7 @@ import photo from 'assets/photo1.jpg';
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: #f9d29d;
-  background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+  background: #226597;
 
   display: flex;
   align-items: center;
@@ -13,12 +12,16 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const ThanksText = styled.h1`font-size: 3.1rem;`;
+export const ThanksText = styled.h1`
+  font-size: 3.1rem;
+  color: white;
+`;
 
 export const Text = styled.h1`
   font-weight: 300;
   margin-top: 4rem;
   font-size: 2.1rem;
+  color: white;
 `;
 
 export const StyledImage = styled.img`

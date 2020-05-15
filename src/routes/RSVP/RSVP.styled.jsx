@@ -52,12 +52,13 @@ export const LabelRadio = styled(Label)`
     right: -2rem;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: white;
     border-radius: 50%;
+    border: 1px solid black;
   }
 
   &:hover input ~ span {
-    background-color: white;
+    background-color: #eee;
   }
 
   & input:checked ~ span {
@@ -75,11 +76,11 @@ export const LabelRadio = styled(Label)`
   }
 
   & span:after {
-    left: 9px;
-    top: 5px;
+    left: 7.5px;
+    top: 4px;
     width: 5px;
     height: 10px;
-    border: solid ${(props) => props.theme.colors.lightGreen};
+    border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

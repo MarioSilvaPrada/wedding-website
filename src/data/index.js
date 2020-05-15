@@ -9,7 +9,7 @@ const data = [
     adress: 'Rua das Flores 1 - Alenquer',
     mapUrl: 'https://goo.gl/maps/tS8ZkcaDpv9K2cYp6',
     image: basilica,
-    background: '#ffe8df',
+    background: '#f3f9fb',
     element: 'cerimonia',
   },
   {
@@ -18,7 +18,7 @@ const data = [
     adress: 'Estrada de Vila Chã',
     mapUrl: 'https://g.page/quintadabichinha?share',
     image: quinta,
-    background: '#f6f578',
+    background: '#e1f2fb',
     element: 'copo',
   },
 ];
