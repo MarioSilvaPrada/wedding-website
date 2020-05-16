@@ -6,7 +6,7 @@ import * as S from './NavBar.styled';
 
 const NavBar = () => {
   const { pathname } = useLocation();
-  const [ toTop, setToTop ] = useState(0);
+  const [toTop, setToTop] = useState(0);
 
   const getDistanceToTop = () => {
     window.addEventListener('scroll', () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
     () => {
       getDistanceToTop();
     },
-    [ toTop ],
+    [toTop],
   );
 
   return (
@@ -27,7 +27,7 @@ const NavBar = () => {
       <SideBarMenu pathname={pathname} />
       <S.Container isVisible={pathname !== '/convite'}>
         <S.Wrapper>
-          <S.StyledLink to='/convite'>Convite</S.StyledLink>
+          <S.StyledLink to="/convite">Convite</S.StyledLink>
           <S.StyledLink to={{ pathname: '/', state: { scroll: 'cerimonia' } }}>
             Cerimónia
           </S.StyledLink>
@@ -35,7 +35,7 @@ const NavBar = () => {
           <S.StyledLink to={{ pathname: '/', state: { scroll: 'copo' } }}>
             Copo de Água
           </S.StyledLink>
-          <S.StyledLink to='/RSVP'>RSVP</S.StyledLink>
+          <S.StyledLink to="/RSVP">RSVP</S.StyledLink>
         </S.Wrapper>
       </S.Container>
       <FixedNavbar toTop={toTop} pathname={pathname} />

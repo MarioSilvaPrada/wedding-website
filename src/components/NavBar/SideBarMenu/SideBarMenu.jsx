@@ -4,12 +4,12 @@ import * as S from '../NavBar.styled';
 import './BurgerMenu.css';
 
 const NavBar = ({ pathname }) => {
-  const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     pathname !== '/convite' && (
       <Menu isOpen={isMenuOpen} onStateChange={(state) => setIsMenuOpen(state.isMenuOpen)}>
-        <S.StyledMenuLink to='/convite' onClick={() => setIsMenuOpen(false)}>
+        <S.StyledMenuLink to="/convite" onClick={() => setIsMenuOpen(false)}>
           Convite
         </S.StyledMenuLink>
         <S.StyledMenuLink
@@ -24,7 +24,7 @@ const NavBar = ({ pathname }) => {
         >
           Copo de Água
         </S.StyledMenuLink>
-        <S.StyledMenuLink to='/RSVP' onClick={() => setIsMenuOpen(false)}>
+        <S.StyledMenuLink to="/RSVP" onClick={() => setIsMenuOpen(false)}>
           RSVP
         </S.StyledMenuLink>
       </Menu>
