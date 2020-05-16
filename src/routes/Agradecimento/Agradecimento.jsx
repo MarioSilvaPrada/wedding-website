@@ -11,15 +11,15 @@ const Agradecimento = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
 
   return (
     <S.Container>
       <S.StyledImage />
       <S.ThanksText>Obrigado pela tua resposta!</S.ThanksText>
-      {state &&
-      state.detail === 'Sim' && <S.Text>Contamos com a tua presença neste dia especial.</S.Text>}
+      {state
+      && state.detail === 'Sim' && <S.Text>Contamos com a tua presença neste dia especial.</S.Text>}
     </S.Container>
   );
 };
