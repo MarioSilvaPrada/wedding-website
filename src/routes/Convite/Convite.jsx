@@ -14,21 +14,23 @@ const Convite = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [pathname],
+    [ pathname ],
   );
   return (
     <S.Container>
-      <LazyImage
-        src={convite}
-        placeholder={({ ref }) => (
-          <div ref={ref}>
-            <Spinner />
-          </div>
-        )}
-        actual={() => <S.Convite src={convite} />}
-      />
+      <div style={{ height: '100%' }}>
+        <LazyImage
+          src={convite}
+          placeholder={({ ref }) => (
+            <div ref={ref}>
+              <Spinner />
+            </div>
+          )}
+          actual={() => <S.Convite src={convite} />}
+        />
+      </div>
 
-      <S.Button to="/">
+      <S.Button to='/'>
         Detalhes
         <FaArrowRight />
       </S.Button>

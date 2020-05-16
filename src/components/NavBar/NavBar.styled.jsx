@@ -10,6 +10,10 @@ export const Container = styled.div`
   color: white;
   ${({ isVisible }) => !isVisible && css`display: none;`};
   z-index: 10;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 3.2rem;
+  }
 `;
 
 export const FixedContainer = styled.div`
@@ -27,6 +31,10 @@ export const FixedContainer = styled.div`
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: .5s;
   z-index: 2;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -35,10 +43,29 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const StyledLink = styled(Link)`
   font-size: 1rem;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
-export const StyledTitle = styled.h1`font-size: 2rem;`;
+export const StyledMenuLink = styled(StyledLink)`
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  color: white;
+  
+`;
+
+export const StyledTitle = styled.h1`
+  font-size: 2rem;
+  @media screen and (max-width: 600px) {
+    font-size: 2.3rem;
+  }
+`;

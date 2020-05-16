@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 3rem 0;
   background-color: #f7f7f7;
   min-height: 100vh;
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
 export const Convite = styled.img`
@@ -15,12 +19,17 @@ export const Convite = styled.img`
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
     0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11),
     0 32px 32px rgba(0, 0, 0, 0.11);
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled(Link)`
   padding: .8rem 1.2rem;
   position: fixed;
   cursor: pointer;
+  align-self: flex-start;
   border-radius: 2px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2rem;
@@ -44,5 +53,10 @@ export const Button = styled(Link)`
 
   svg {
     margin-left: .5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    top: 2rem;
+    right: 1rem;
   }
 `;
