@@ -79,10 +79,10 @@ export const LabelRadio = styled(Label)`
   }
 
   & span:after {
-    left: 0.468rem;
-    top: 0.25rem;
+    left: 0.7rem;
+    top: 0.4rem;
     width: .31rem;
-    height: .625rem;
+    height: .7rem;
     border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -141,6 +141,7 @@ export const StyledImage = styled.div`
   height: 80vh;
   width: 100%;
   background-size: cover;
+  background-position: center;
   position: relative;
 `;
 

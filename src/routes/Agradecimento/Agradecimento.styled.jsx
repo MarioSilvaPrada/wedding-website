@@ -15,13 +15,19 @@ export const Container = styled.div`
 export const ThanksText = styled.h1`
   font-size: 3.1rem;
   color: white;
+  margin: 0 2rem;
+  text-align: center;
+  line-height: 3.2rem;
 `;
 
 export const Text = styled.h1`
   font-weight: 300;
-  margin-top: 4rem;
   font-size: 2.1rem;
   color: white;
+  line-height: 3.2rem;
+  margin: 4rem 2rem;
+  text-align: center;
+
 `;
 
 export const StyledImage = styled.img`
