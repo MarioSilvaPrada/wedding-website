@@ -50,6 +50,7 @@ export const LinkMap = styled.a`
   color: #00a1ab;
   border-bottom: 1px solid transparent;
   transition: .5s;
+  font-size: 16px;
 
   &:hover {
     border-bottom: 1px solid #00a1ab;
@@ -59,4 +60,5 @@ export const LinkMap = styled.a`
 export const Adress = styled.p`
   margin-bottom: 1rem;
   font-weight: 300;
+  font-size: 16px;
 `;

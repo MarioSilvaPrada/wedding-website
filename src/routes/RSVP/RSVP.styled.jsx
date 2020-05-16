@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledContainer = styled.div`min-height: 100vh;`;
 
 export const FormContainer = styled.div`
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
