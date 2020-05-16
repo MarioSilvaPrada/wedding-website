@@ -8,6 +8,11 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   background: ${(props) => props.theme.colors.color2};
+  padding: 2rem;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 50vh;
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -18,7 +23,7 @@ export const StyledForm = styled.form`
 `;
 
 export const Label = styled.label`
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: .5rem;
   display: block;
   font-weight: 300;
@@ -29,7 +34,7 @@ export const LabelRadio = styled(Label)`
   position: relative;
   user-select: none;
   cursor: pointer;
-  font-size: .9rem;
+  font-size: 1.2rem;
   font-weight: 500;
 
   & > label {
@@ -46,10 +51,10 @@ export const LabelRadio = styled(Label)`
 
   & > span {
     position: absolute;
-    bottom: -.25rem ;
-    right: -2rem;
-    height: 25px;
-    width: 25px;
+    bottom: -.31rem ;
+    right: -2.4rem;
+    height: 2rem;
+    width: 2rem;
     background-color: white;
     border-radius: 50%;
     border: 1px solid black;
@@ -74,10 +79,10 @@ export const LabelRadio = styled(Label)`
   }
 
   & span:after {
-    left: 7.5px;
-    top: 4px;
-    width: 5px;
-    height: 10px;
+    left: 0.468rem;
+    top: 0.25rem;
+    width: .31rem;
+    height: .625rem;
     border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -91,7 +96,7 @@ export const Checkmark = styled.span``;
 export const StyledInput = styled.input`
   width: 100%;
   border: none;
-  padding: .6rem;
+  padding: .7rem;
   font-size: 1.1rem;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
@@ -158,6 +163,11 @@ export const TitleContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   color: white;
+  text-align: center;
+
+  @media screen and (max-width: 600px) {
+    margin: 0 2rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -165,10 +175,15 @@ export const Title = styled.h1`
   letter-spacing: -0.0454545em;
   margin-bottom: 3rem;
   z-index: 2;
+
+  @media screen and (max-width: 600px) {
+    font-size: 4.5rem;
+  }
 `;
 
 export const SubTitle = styled.p`
   font-size: 2.3rem;
   font-weight: 300;
   z-index: 2;
+  line-height: 3.5rem;
 `;

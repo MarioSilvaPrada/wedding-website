@@ -18,6 +18,11 @@ export const StyledImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (max-width: 600px) {
+    width: 28rem;
+    height: 28rem;
+  }
 `;
 
 export const Name = styled.p`
@@ -52,6 +57,6 @@ export const LinkMap = styled.a`
 `;
 
 export const Adress = styled.p`
-  margin-bottom: .9rem;
+  margin-bottom: 1rem;
   font-weight: 300;
 `;

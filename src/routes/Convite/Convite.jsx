@@ -14,7 +14,7 @@ const Convite = () => {
     () => {
       window.scrollTo(0, 0);
     },
-    [ pathname ],
+    [pathname],
   );
   return (
     <S.Container>
@@ -30,7 +30,7 @@ const Convite = () => {
         />
       </div>
 
-      <S.Button to='/'>
+      <S.Button to="/">
         Detalhes
         <FaArrowRight />
       </S.Button>

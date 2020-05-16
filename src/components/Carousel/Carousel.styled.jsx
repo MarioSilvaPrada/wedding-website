@@ -33,15 +33,25 @@ export const Title = styled.div`
   margin-right: auto;
   text-align: center;
   color: white;
+
+  @media screen and (max-width: 600px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 `;
 
 export const MainText = styled.h1`
   font-size: 6rem;
   margin-bottom: 3rem;
   letter-spacing: -0.0454545em;
+
+  @media screen and (max-width: 600px) {
+    letter-spacing: 0;
+  }
 `;
 
 export const SubText = styled.p`
   font-size: 2.3rem;
   font-weight: 300;
+  line-height: 3.5rem;
 `;

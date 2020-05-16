@@ -4,11 +4,11 @@ import * as S from '../NavBar.styled';
 import './BurgerMenu.css';
 
 const NavBar = () => {
-  const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Menu isOpen={isMenuOpen} onStateChange={(state) => setIsMenuOpen(state.isMenuOpen)}>
-      <S.StyledMenuLink to='/convite' onClick={() => setIsMenuOpen(false)}>
+      <S.StyledMenuLink to="/convite" onClick={() => setIsMenuOpen(false)}>
         Convite
       </S.StyledMenuLink>
       <S.StyledMenuLink
@@ -23,7 +23,7 @@ const NavBar = () => {
       >
         Copo de Água
       </S.StyledMenuLink>
-      <S.StyledMenuLink to='/RSVP' onClick={() => setIsMenuOpen(false)}>
+      <S.StyledMenuLink to="/RSVP" onClick={() => setIsMenuOpen(false)}>
         RSVP
       </S.StyledMenuLink>
     </Menu>
