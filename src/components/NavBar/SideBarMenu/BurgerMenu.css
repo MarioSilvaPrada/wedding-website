@@ -7,8 +7,13 @@
   display: none;
 }
 
+.bm-overlay {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
-  .bm-burger-button {
+  .bm-burger-button,
+  .bm-overlay {
     display: block;
   }
 }
