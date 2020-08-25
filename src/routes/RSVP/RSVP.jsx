@@ -16,6 +16,7 @@ const RSVP = () => {
   const { pathname } = useLocation();
   const history = useHistory();
 
+
   useEffect(
     () => {
       window.scrollTo(0, 0);
